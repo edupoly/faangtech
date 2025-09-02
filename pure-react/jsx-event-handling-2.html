@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <input type="text" onkeyup="abc(event)">
+    <h1>JS Based Entered Text:<span id='d1'></span></h1>
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+        function abc(ev) {
+            var x = ev.target.value;
+            document.getElementById("d1").innerText = x;
+        }
+
+        function xyz(ev) {
+            document.getElementById("d4").innerText = ev.target.value;
+        }
+
+
+        var jsxUI = <div>
+            <input type="text" onKeyUp={(e) => { xyz(e) }} />
+            <h1>JSX Based Entered Text:<span id='d4'></span></h1>
+        </div>
+        ReactDOM.render(jsxUI, document.getElementById("root"))
+    </script>
+</body>
+
+</html>
+<!-- imperative syntax(js,java,python) -->
+<!-- declearative syntax -->

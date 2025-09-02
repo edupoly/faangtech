@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        .abc {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: lightcoral;
+            border: 2px solid red;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        .xyz {
+            font-family: 'Courier New', Courier, monospace;
+            color: rgb(20, 182, 235);
+            border: 2px solid rgb(21, 4, 169);
+            padding: 10px;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello 10+20</h1>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        var p = 'Madan'
+        var a = +prompt();
+        // var jsxh1 = <h1 style={a % 2 == 0 ? { color: 'green' } : { color: 'blue' }}>Hello JSX Element {a % 2 === 0 ? "Even" : "Odd"} </h1>
+        var jsxh1 = <h1 className={a % 2 === 0 ? 'abc' : 'xyz'}>Hello JSX Element {a % 2 === 0 ? "Even" : "Odd"} </h1>
+        ReactDOM.render(jsxh1, document.getElementById("root"))
+    </script>
+</body>
+
+</html>
+<!-- imperative syntax(js,java,python) -->
+<!-- declearative syntax -->

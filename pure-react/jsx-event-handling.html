@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <button onclick="alert('hi')">HTML Button Say Hi</button>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        var jsbtn = document.createElement("button")
+        jsbtn.innerText = "JS Button Say Hello";
+        jsbtn.onclick = function () {
+            alert('hello')
+        }
+        document.body.appendChild(jsbtn)
+
+        var jsxbtn = <button onClick={() => { alert('Bagunnara') }}>JSX Button Say's Bagunnara</button>
+        ReactDOM.render(jsxbtn, document.getElementById("root"))
+    </script>
+</body>
+
+</html>
+<!-- imperative syntax(js,java,python) -->
+<!-- declearative syntax -->

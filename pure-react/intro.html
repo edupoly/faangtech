@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <h1 style="color:red">Hello HTML ELEMENT</h1>
+    <div id="root"></div>
+    <div id="abcd"></div>
+    <script type="text/babel">
+
+        var jsh1 = document.createElement("h1")
+        jsh1.innerText = "Hello JAVASCRIPT ELEMENT";
+        jsh1.style.color = "green"
+        document.body.appendChild(jsh1)
+
+        var rjsh1 = React.createElement("h1", { style: { color: "blue" } }, "Hello REACTJS ELEMENT");
+        ReactDOM.render(rjsh1, document.getElementById("root"))
+
+        var jsxh1 = <h1 style={{ color: "pink" }}>Hello JSX Element</h1>
+        //React.createElement("h1",null,"Hello JSX Element")
+        ReactDOM.render(jsxh1, document.getElementById("abcd"))
+    </script>
+</body>
+
+</html>
+<!-- imperative syntax(js,java,python) -->
+<!-- declearative syntax -->

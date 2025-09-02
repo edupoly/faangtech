@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="./products.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        var prodTable = <table border='2'>
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Category</th>
+                    <th>Rating</th>
+                    <th>Count</th>
+                </tr>
+            </thead>
+            <tbody>
+                {
+                    products.map((prod) => {
+                        return <tr>
+                            <td>
+                                <img src={prod.image} width='50px' height='50px' alt="" />
+                            </td>
+                            <td>{prod.title}</td>
+                            <td>{prod.price}</td>
+                            <td>{prod.category}</td>
+                            <td>{prod.rating.rate}</td>
+                            <td>{prod.rating.count}</td>
+                        </tr>
+                    })
+                }
+            </tbody>
+
+
+        </table>
+
+        ReactDOM.render(prodTable, document.getElementById("root"))
+    </script>
+</body>
+
+</html>
+<!-- 
+category
+: 
+"jewelery"
+description
+: 
+"From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection."
+id
+: 
+5
+image
+: 
+"https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_t.png"
+price
+: 
+695
+rating
+: 
+{rate: 4.6, count: 400}
+title
+: 
+"John Hardy Women's Legends Naga Gold & Sil
+-->
+<!-- imperative syntax(js,java,python) -->
+<!-- declearative syntax -->
