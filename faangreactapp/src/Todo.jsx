@@ -21,6 +21,7 @@ function Todo(props) {
       >
         Done
       </button>
+      <button>Undo</button>
       <button
         onClick={() => {
           props.delTask(props.id);
