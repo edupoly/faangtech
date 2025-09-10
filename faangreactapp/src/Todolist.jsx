@@ -10,11 +10,11 @@ function Todolist() {
     { title: "paybills", status: true },
   ]);
 
-  function doneTask(id) {
+  function toggleTask(id) {
     setTodos((todos) => {
       return todos.map((todo, i) => {
         if (i === id) {
-          todo.status = true;
+          todo.status = !todo.status;
         }
         return todo;
       });
@@ -58,7 +58,7 @@ function Todolist() {
               task={task}
               id={i}
               delTask={delTask}
-              doneTask={doneTask}
+              toggleTask={toggleTask}
               key={i}
             ></Todo>
           );
