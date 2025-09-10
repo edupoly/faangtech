@@ -33,7 +33,7 @@ function Todolist() {
     });
   }, []);
   function addTodo() {
-    setTodos([...todos, newtask]);
+    setTodos([...todos, { title: newtask, status: false }]);
   }
   return (
     <div className="border border-4 p-2 m-2">
@@ -51,6 +51,15 @@ function Todolist() {
       >
         Add Todo
       </button>
+      <br />
+      <b>Filter::</b>
+      <br />
+      <input type="radio" />
+      :All &nbsp;&nbsp;&nbsp;
+      <input type="radio" />
+      :Completed &nbsp;&nbsp;&nbsp;
+      <input type="radio" />
+      :Pending &nbsp;&nbsp;&nbsp;
       <ul>
         {todos.map((task, i) => {
           return (
