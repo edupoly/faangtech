@@ -1,14 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Todo from "./Todo";
 function Todolist() {
   var [newtask, setNewTask] = React.useState("");
-  var [todos, setTodos] = useState([
+  var [allTodos, setAllTodos] = useState([
     { title: "firsttast", status: false },
     { title: "get toys", status: true },
     { title: "goto gym", status: true },
     { title: "goto goa", status: false },
     { title: "paybills", status: true },
   ]);
+
+  var [todos, setTodos] = useState([]);
+
+  useEffect(() => {
+    setTodos([...allTodos]);
+  }, []);
 
   function toggleTask(id) {
     setTodos((todos) => {
@@ -33,7 +39,28 @@ function Todolist() {
     });
   }, []);
   function addTodo() {
-    setTodos([...todos, { title: newtask, status: false }]);
+    setAllTodos([...allTodos, { title: newtask, status: false }]);
+  }
+  function filterTodos(f) {
+    if (f === "all") {
+      setTodos([...allTodos]);
+    }
+    if (f === "completed") {
+      let temp = allTodos.filter((todo) => {
+        if (todo.status === true) {
+          return true;
+        }
+      });
+      setTodos([...temp]);
+    }
+    if (f === "pending") {
+      let temp = allTodos.filter((todo) => {
+        if (todo.status === false) {
+          return true;
+        }
+      });
+      setTodos([...temp]);
+    }
   }
   return (
     <div className="border border-4 p-2 m-2">
@@ -54,11 +81,29 @@ function Todolist() {
       <br />
       <b>Filter::</b>
       <br />
-      <input type="radio" />
+      <input
+        type="radio"
+        name="fil"
+        onChange={() => {
+          filterTodos("all");
+        }}
+      />
       :All &nbsp;&nbsp;&nbsp;
-      <input type="radio" />
+      <input
+        type="radio"
+        name="fil"
+        onChange={() => {
+          filterTodos("completed");
+        }}
+      />
       :Completed &nbsp;&nbsp;&nbsp;
-      <input type="radio" />
+      <input
+        type="radio"
+        name="fil"
+        onChange={() => {
+          filterTodos("pending");
+        }}
+      />
       :Pending &nbsp;&nbsp;&nbsp;
       <ul>
         {todos.map((task, i) => {
