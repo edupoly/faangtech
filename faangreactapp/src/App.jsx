@@ -1,10 +1,12 @@
 import "./App.css";
-import Counter from "./Counter";
+import Counter from "./counter/Counter";
+import Todolist from "./Todolist";
 function App() {
   return (
     <div className="border border-2 border-danger p-2 m-2">
       <h2>Hello Edupoly</h2>
-      <Counter></Counter>
+      <Todolist></Todolist>
+      {/* <Counter></Counter> */}
     </div>
   );
 }
