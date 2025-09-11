@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import Todo from "./Todo";
+import { v4 as uuidv4 } from "uuid";
 function Todolist() {
   var [newtask, setNewTask] = React.useState("");
   var [allTodos, setAllTodos] = useState([
-    { title: "firsttast", status: false },
-    { title: "get toys", status: true },
-    { title: "goto gym", status: true },
-    { title: "goto goa", status: false },
-    { title: "paybills", status: true },
+    { title: "firsttast", status: false, id: uuidv4() },
+    { title: "get toys", status: true, id: uuidv4() },
+    { title: "goto gym", status: true, id: uuidv4() },
+    { title: "goto goa", status: false, id: uuidv4() },
+    { title: "paybills", status: true, id: uuidv4() },
   ]);
 
   var [todos, setTodos] = useState([]);
@@ -17,9 +18,9 @@ function Todolist() {
   }, []);
 
   function toggleTask(id) {
-    setTodos((todos) => {
-      return todos.map((todo, i) => {
-        if (i === id) {
+    setAllTodos((todos) => {
+      return todos.map((todo) => {
+        if (todo.id == id) {
           todo.status = !todo.status;
         }
         return todo;
@@ -27,10 +28,14 @@ function Todolist() {
     });
   }
 
+  useEffect(() => {
+    setTodos([...allTodos]);
+  }, [allTodos]);
+
   var delTask = React.useCallback(function (ind) {
     setTodos((oldtodos) => {
-      return oldtodos.filter((td, i) => {
-        if (i == ind) {
+      return oldtodos.filter((td) => {
+        if (td.id == ind) {
           return false;
         } else {
           return true;
@@ -39,7 +44,7 @@ function Todolist() {
     });
   }, []);
   function addTodo() {
-    setAllTodos([...allTodos, { title: newtask, status: false }]);
+    setAllTodos([...allTodos, { title: newtask, status: false, id: uuidv4() }]);
   }
   function filterTodos(f) {
     if (f === "all") {
@@ -106,14 +111,13 @@ function Todolist() {
       />
       :Pending &nbsp;&nbsp;&nbsp;
       <ul>
-        {todos.map((task, i) => {
+        {todos.map((task) => {
           return (
             <Todo
               task={task}
-              id={i}
               delTask={delTask}
               toggleTask={toggleTask}
-              key={i}
+              key={task.id}
             ></Todo>
           );
         })}

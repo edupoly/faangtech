@@ -16,14 +16,14 @@ function Todo(props) {
       {props.task.title}
       <button
         onClick={() => {
-          props.toggleTask(props.id);
+          props.toggleTask(props.task.id);
         }}
       >
         {props.task.status ? "Undo" : "Done"}
       </button>
       <button
         onClick={() => {
-          props.delTask(props.id);
+          props.delTask(props.task.id);
         }}
       >
         Delete
