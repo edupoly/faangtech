@@ -5,6 +5,9 @@ function reducer(state, action) {
   if (action.type === "inc") {
     return { count: state.count + 1 };
   }
+  if (action.type === "dec") {
+    return { count: state.count - 1 };
+  }
 }
 function Counter() {
   var [state, dispatch] = useReducer(reducer, initialState);
@@ -20,7 +23,7 @@ function Counter() {
       </button>
       <button
         onClick={() => {
-          dispatch();
+          dispatch({ type: "dec" });
         }}
       >
         Decerement
