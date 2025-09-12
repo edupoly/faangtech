@@ -3,13 +3,21 @@ const initialState = {
   todos: ["buy toys", "goto gym", "call friends"],
 };
 function reducer(state, action) {
-  if (action.type === "ADDTODO") {
-    return { todos: [...state.todos, action.payload] };
-  }
-  if (action.type === "DELETETODO") {
-    var temp = [...state.todos];
-    temp.splice(action.payload, 1);
-    return { todos: [...temp] };
+  //   if (action.type === "ADDTODO") {
+  //     return { todos: [...state.todos, action.payload] };
+  //   }
+  //   if (action.type === "DELETETODO") {
+  //     var temp = [...state.todos];
+  //     temp.splice(action.payload, 1);
+  //     return { todos: [...temp] };
+  //   }
+  switch (action.type) {
+    case "ADDTODO":
+      return { todos: [...state.todos, action.payload] };
+    case "DELETETODO":
+      var temp = [...state.todos];
+      temp.splice(action.payload, 1);
+      return { todos: [...temp] };
   }
 }
 function Todolist() {
