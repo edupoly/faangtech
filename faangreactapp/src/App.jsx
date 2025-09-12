@@ -61,4 +61,13 @@ function App() {
 }
 
 export default App;
-// user
+// useState
+// useReducer
+// useContext
+
+// useEffect
+
+// useCallback
+// useMemo
+
+// useRef
