@@ -1,9 +1,12 @@
 import { useEffect, useRef } from "react";
 import "./App.css";
+import Address from "./Address";
 
 function App() {
   var ref1 = useRef();
   var ref2 = useRef();
+  var ref3 = useRef();
+  var aref = useRef();
   useEffect(() => {
     // document.getElementById("d1").focus();
     ref1.current.focus();
@@ -11,6 +14,16 @@ function App() {
   function checkEnter(ev) {
     if (ev.key === "Enter") {
       ref2.current.focus();
+    }
+  }
+  function checkenter2(ev) {
+    if (ev.key === "Enter") {
+      ref3.current.focus();
+    }
+  }
+  function checkEnter3(ev) {
+    if (ev.key === "Enter") {
+      aref.current.focus();
     }
   }
   return (
@@ -24,7 +37,22 @@ function App() {
         }}
       />
       <br />
-      <input type="text" ref={ref2} />
+      <input
+        type="text"
+        ref={ref2}
+        onKeyUp={(e) => {
+          checkenter2(e);
+        }}
+      />
+      <br />
+      <input
+        type="text"
+        ref={ref3}
+        onKeyUp={(e) => {
+          checkEnter3(e);
+        }}
+      />
+      <Address a={10} b={"praveen"} ref={aref}></Address>
       <br />
       <input type="text" />
     </div>
