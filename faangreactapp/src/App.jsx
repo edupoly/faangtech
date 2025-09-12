@@ -7,6 +7,7 @@ function App() {
   var ref2 = useRef();
   var ref3 = useRef();
   var aref = useRef();
+  var ref4 = useRef();
   useEffect(() => {
     // document.getElementById("d1").focus();
     ref1.current.focus();
@@ -52,11 +53,12 @@ function App() {
           checkEnter3(e);
         }}
       />
-      <Address a={10} b={"praveen"} ref={aref}></Address>
+      <Address a={10} b={"praveen"} ref={[aref, ref4]}></Address>
       <br />
-      <input type="text" />
+      <input type="text" ref={ref4} />
     </div>
   );
 }
 
 export default App;
+// user
