@@ -55,7 +55,7 @@ function App() {
       />
       <Address a={10} b={"praveen"} ref={[aref, ref4]}></Address>
       <br />
-      <input type="text" ref={ref4} />
+      <input type="text" ref={ref4} placeholder="Enter your state" />
     </div>
   );
 }
