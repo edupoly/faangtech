@@ -1,10 +1,14 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import "./App.css";
 import OurProducts from "./OurProducts";
 import OurServices from "./OurServices";
 import Trainings from "./Trainings";
 
 function App() {
+  let navigate = useNavigate();
+  function abc() {
+    navigate("/services");
+  }
   return (
     <div className="border border-2 p-2 m-2 border-success">
       <h2>Hello Edupoly</h2>
@@ -33,6 +37,15 @@ function App() {
         </li>
         <li>
           <Link to="/recipes">Recipes</Link>
+        </li>
+        <li>
+          <button
+            onClick={() => {
+              abc();
+            }}
+          >
+            Login
+          </button>
         </li>
       </ul>
       <div className="border border-5 p-2 m-2 border-danger">
