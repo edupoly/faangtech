@@ -8,7 +8,7 @@ export const todolistSlice = createSlice({
   initialState,
   reducers: {
     addTodo: (state, action) => {
-      state.todos.push(action.payload);
+      state.todos.push(action.payload.value);
     },
     deleteTodo: (state, action) => {
       state.todos.slice(action.payload, 1);
