@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addTodo } from "./todolistSlice";
+import { addTodo, deleteTodo } from "./todolistSlice";
 
 function Todolist() {
   var { todos } = useSelector((state) => state.todoR);
@@ -17,8 +17,19 @@ function Todolist() {
         Add Todo
       </button>
       <ul>
-        {todos.map((todo) => {
-          return <li>{todo}</li>;
+        {todos.map((todo, i) => {
+          return (
+            <li>
+              {todo}
+              <button
+                onClick={() => {
+                  dispatch(deleteTodo(i));
+                }}
+              >
+                Delete
+              </button>
+            </li>
+          );
         })}
       </ul>
     </div>
