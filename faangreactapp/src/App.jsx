@@ -18,6 +18,9 @@ function App() {
         <li>
           <Link to="/products">Products</Link>
         </li>
+        <li>
+          <Link to="/recipes">Recipes</Link>
+        </li>
       </ul>
       <Outlet></Outlet>
     </div>
