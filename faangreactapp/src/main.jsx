@@ -9,7 +9,9 @@ import Todolist from "./features/todolist/Todolist.jsx";
 import Products from "./features/products/Products.jsx";
 import Recipes from "./features/recipes/Recipes.jsx";
 import RecipeDetails from "./features/recipes/RecipeDetails.jsx";
-
+import Movies from "./features/movies/Movies.jsx";
+import MovieDetails from "./features/movies/MovieDetails.jsx";
+import AddMovie from "./features/movies/AddMovie.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -30,6 +32,18 @@ const router = createBrowserRouter([
       {
         path: "/recipes",
         element: <Recipes></Recipes>,
+      },
+      {
+        path: "/movies",
+        element: <Movies></Movies>,
+      },
+      {
+        path: "/movies/:id",
+        element: <MovieDetails></MovieDetails>,
+      },
+      {
+        path: "/addMovie",
+        element: <AddMovie></AddMovie>,
       },
       {
         path: "/recipe/:id",
