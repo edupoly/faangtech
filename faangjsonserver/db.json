@@ -40,7 +40,7 @@
     },
     {
       "id": "2",
-      "title": "The Godfather",
+      "title": "RGV The Godfather",
       "year": 1972,
       "genre": [
         "Crime",
@@ -137,19 +137,6 @@
       "imageUrl": "https://m.media-amazon.com/images/M/MV5BY2NkZjEzMDgtN2RjYy00YzM1LWI4ZmQtMjIwYjFjNmI3ZGEwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
     },
     {
-      "id": "10",
-      "title": "The Lord of the Rings: The Fellowship of the Ring",
-      "year": 2001,
-      "genre": [
-        "Action",
-        "Adventure",
-        "Drama"
-      ],
-      "director": "Peter Jackson",
-      "plot": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
-      "imageUrl": "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg"
-    },
-    {
       "id": "11",
       "title": "Interstellar",
       "year": 2014,
@@ -174,19 +161,6 @@
       "director": "Bong Joon Ho",
       "plot": "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.",
       "imageUrl": "https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_SX300.jpg"
-    },
-    {
-      "id": "13",
-      "title": "Spirited Away",
-      "year": 2001,
-      "genre": [
-        "Animation",
-        "Adventure",
-        "Family"
-      ],
-      "director": "Hayao Miyazaki",
-      "plot": "During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.",
-      "imageUrl": "https://m.media-amazon.com/images/M/MV5BMjlmZmI5MDctNDE2YS00YWE0LWE5ZWItZDBhYWQ0NTcxNWRhXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"
     },
     {
       "id": "14",
@@ -266,19 +240,6 @@
       "imageUrl": "https://m.media-amazon.com/images/M/MV5BYTYxNGMyZTYtMjE3MS00MzNjLWFjNmYtMDk3N2FmM2JiM2M1XkEyXkFqcGdeQXVyNjY5NDU4NDI@._V1_SX300.jpg"
     },
     {
-      "id": "20",
-      "title": "Back to the Future",
-      "year": 1985,
-      "genre": [
-        "Adventure",
-        "Comedy",
-        "Sci-Fi"
-      ],
-      "director": "Robert Zemeckis",
-      "plot": "Marty McFly, a 17-year-old high school student, is accidentally sent thirty years into the past in a time-traveling DeLorean invented by his close friend, the eccentric scientist Doc Brown.",
-      "imageUrl": "https://m.media-amazon.com/images/M/MV5BZmU0M2Y1OGUtZjIxNi00ZjBkLTg1MjgtOWIyNThiZWIwYjRiXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
-    },
-    {
       "id": "21",
       "title": "Jurassic Park",
       "year": 1993,
@@ -326,19 +287,6 @@
       "director": "Ridley Scott",
       "plot": "After a space merchant vessel receives an unknown transmission as a distress call, one of the crew is attacked by a mysterious life form and they soon realize that its life cycle has merely begun.",
       "imageUrl": "https://m.media-amazon.com/images/M/MV5BOGQzZTBjMjQtOTVmMS00NGE5LWEyYmMtOGQ1ZGZjNmRkYjFhXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg"
-    },
-    {
-      "id": "25",
-      "title": "Psycho",
-      "year": 1960,
-      "genre": [
-        "Horror",
-        "Mystery",
-        "Thriller"
-      ],
-      "director": "Alfred Hitchcock",
-      "plot": "A Phoenix secretary embezzles $40,000 from her employer's client, goes on the run, and checks into a remote motel run by a young man under the domination of his mother.",
-      "imageUrl": "https://m.media-amazon.com/images/M/MV5BNTQwNDM1YzItNDAxZC00NWY2LTk0M2UtNDIwNWI5OGUyNWUxXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
     },
     {
       "id": "26",
@@ -405,7 +353,7 @@
     },
     {
       "id": "31",
-      "title": "Joker",
+      "title": "Brahmanandam",
       "year": 2019,
       "genre": [
         "Crime",

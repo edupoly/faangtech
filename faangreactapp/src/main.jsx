@@ -12,6 +12,7 @@ import RecipeDetails from "./features/recipes/RecipeDetails.jsx";
 import Movies from "./features/movies/Movies.jsx";
 import MovieDetails from "./features/movies/MovieDetails.jsx";
 import AddMovie from "./features/movies/AddMovie.jsx";
+import EditMovie from "./features/movies/EditMovie.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: "/addMovie",
         element: <AddMovie></AddMovie>,
+      },
+      {
+        path: "/editMovie/:id",
+        element: <EditMovie></EditMovie>,
       },
       {
         path: "/recipe/:id",

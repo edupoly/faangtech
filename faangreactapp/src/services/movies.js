@@ -19,6 +19,23 @@ export const moviesApi = createApi({
         body: JSON.stringify(movie),
       }),
     }),
+    deleteMovieById: builder.mutation({
+      query: (id) => {
+        return {
+          url: `/${id}`,
+          method: "DELETE",
+        };
+      },
+    }),
+    updateMovieById: builder.mutation({
+      query: (movie) => {
+        return {
+          url: `/${movie.id}`,
+          method: "PUT",
+          body: JSON.stringify(movie),
+        };
+      },
+    }),
   }),
 });
 
@@ -26,6 +43,9 @@ export const moviesApi = createApi({
 // auto-generated based on the defined endpoints
 export const {
   useGetAllMoviesQuery,
+  useLazyGetAllMoviesQuery,
   useGetMovieByIdQuery,
   useAddNewMovieMutation,
+  useDeleteMovieByIdMutation,
+  useUpdateMovieByIdMutation,
 } = moviesApi;
