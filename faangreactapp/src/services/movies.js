@@ -36,6 +36,13 @@ export const moviesApi = createApi({
         };
       },
     }),
+    addMovieToTheatres: builder.mutation({
+      query: (movieTheatres) => ({
+        url: `/`,
+        method: "POST",
+        body: JSON.stringify(movieTheatres),
+      }),
+    }),
   }),
 });
 

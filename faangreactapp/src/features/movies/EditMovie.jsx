@@ -9,7 +9,7 @@ import {
 function EditMovie() {
   var { id } = useParams();
   var navigate = useNavigate();
-  var { isLoading, data } = useGetMovieByIdQuery(id);
+  var { isLoading = true, data } = useGetMovieByIdQuery(id);
   var [movieDetails, setMovieDetails] = useState({});
   var [updateMovieFn] = useUpdateMovieByIdMutation();
   var [latestMoviesFn] = useLazyGetAllMoviesQuery();
@@ -26,7 +26,8 @@ function EditMovie() {
   }
   return (
     <div>
-      <h1>EditMovie</h1>
+      <h1>{isLoading}EditMovie</h1>
+
       <form
         onSubmit={(e) => {
           handleSubmit(e);

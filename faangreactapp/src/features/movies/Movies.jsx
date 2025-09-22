@@ -22,6 +22,9 @@ function Movies() {
       alert("Sarle nee istam");
     }
   }
+  function addTheatres(movieId) {
+    navigate(`/addMovieToTheatres/${movieId}`);
+  }
   return (
     <div className="border border-4 p-2 m-2 border-danger">
       <h1>Movies {isLoading && "Loading..."}</h1>
@@ -44,6 +47,13 @@ function Movies() {
                   }}
                 >
                   Delete
+                </button>
+                <button
+                  onClick={() => {
+                    addTheatres(movie.id);
+                  }}
+                >
+                  Add Theatres
                 </button>
               </li>
             );

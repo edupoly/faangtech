@@ -26,6 +26,84 @@
   "profile": {
     "name": "typicode"
   },
+  "tasks": [
+    {
+      "id": "d227",
+      "title": "pay bills",
+      "status": false
+    },
+    {
+      "id": "438c",
+      "title": "goto gunturu",
+      "status": false
+    },
+    {
+      "id": "5f85",
+      "title": "eat food",
+      "status": false
+    },
+    {
+      "id": "fd83",
+      "title": "lets see",
+      "status": false
+    },
+    {
+      "id": "3b59",
+      "title": "finally its over update",
+      "status": false
+    }
+  ],
+  "movieTheatres": [
+    {
+      "id": "2731",
+      "movieId": "4",
+      "theatres": [
+        "cc68d708-5b64-4419-874b-55b4260073ee",
+        "f8bc0fca-7883-4b87-b886-629137fecb8e",
+        "acfc"
+      ]
+    },
+    {
+      "id": "00ad",
+      "movieId": "12",
+      "theatres": [
+        "cc68d708-5b64-4419-874b-55b4260073ee",
+        "6793ddd3-ad6a-486b-8d1e-912df056a091"
+      ]
+    }
+  ],
+  "theatres": [
+    {
+      "id": "acfc",
+      "tname": "Hari Hara Cinemas",
+      "timage": "https://ind.5bestincity.com/profileimages/india/harihar-cinemas-cinema-hall-guntur-andhra-pradesh/30256-8e2ba-1.jpg",
+      "tplace": "Koretipadu guntur"
+    },
+    {
+      "id": "cc68d708-5b64-4419-874b-55b4260073ee",
+      "tname": "Mytri Cinemas",
+      "timage": "https://igimage.indiaglitz.com/telugu/home/mythri-multiplex29032024_c.jpg",
+      "tplace": "Edo okati"
+    },
+    {
+      "id": "6793ddd3-ad6a-486b-8d1e-912df056a091",
+      "tname": "PVR The Cinema",
+      "timage": "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nookegKPKKVZ9A5SHjy8W8_Jg-ou60W5z0cfnqf_s5aqXsoaGbASmwiojInpSTzYE_xeDRsap6KOkuCKKp7nSlEgLhb_jtOBuSBDxq2_63EKyGTr8o0lDt2qasoWTSlEPFdeMqp9w=s1360-w1360-h1020-rw",
+      "tplace": "Guntur"
+    },
+    {
+      "id": "95b38e46-c59a-4f5d-accb-dc8f50c541cc",
+      "tname": "JLE Cinemas 4K 3D",
+      "timage": "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nro3OtQ8p8oAOBKm2ncZq6DcotcWqBeMN4qRlFJlaZGJllSFZwc5v4cy19hTwEs_ubD0qT7cQbbPkSzt2-vcA6eGEQwDnFxNheyGyCKad8DKsb5A5uZd3R7DaDVQ4R5Fmyp4PCR=s1360-w1360-h1020-rw",
+      "tplace": "Guntur"
+    },
+    {
+      "id": "f8bc0fca-7883-4b87-b886-629137fecb8e",
+      "tname": "Bhaskar Cinemas",
+      "timage": "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqhokIZBL0Qw3a9Il6HGwBKDM3GK-S_iDhc_8Sj3CEENf66BRI5WE2o2ZDlVxci1it4yc24mG2NkwPsYqt6nTaB6BE1yxXGUdi7W_V20IX4ZLMV3R8_pdoC8xLN4eOoWT04718=s1360-w1360-h1020-rw",
+      "tplace": "Guntur"
+    }
+  ],
   "movies": [
     {
       "id": "1",

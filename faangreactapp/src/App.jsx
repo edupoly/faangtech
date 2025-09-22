@@ -27,6 +27,16 @@ function App() {
         <li>
           <Link to="/addMovie">Add Movie</Link>
         </li>
+        <li>
+          <Link to="/theatres">Theatres</Link>
+        </li>
+        <li>
+          <Link to="/addTheatre">Add Theatre</Link>
+        </li>
+
+        <li>
+          <Link to="/tasklist">Tasklist</Link>
+        </li>
       </ul>
       <Outlet></Outlet>
     </div>

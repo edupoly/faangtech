@@ -13,6 +13,11 @@ import Movies from "./features/movies/Movies.jsx";
 import MovieDetails from "./features/movies/MovieDetails.jsx";
 import AddMovie from "./features/movies/AddMovie.jsx";
 import EditMovie from "./features/movies/EditMovie.jsx";
+import Theatres from "./features/theatres/Theatres.jsx";
+import AddTheatre from "./features/theatres/AddTheatre.jsx";
+import AddMovieToTheatres from "./features/movies/AddMovieToTheatres.jsx";
+import TaskList from "./features/tasks/TaskList.jsx";
+import EditTask from "./features/tasks/EditTask.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -51,8 +56,28 @@ const router = createBrowserRouter([
         element: <EditMovie></EditMovie>,
       },
       {
+        path: "/theatres",
+        element: <Theatres></Theatres>,
+      },
+      {
         path: "/recipe/:id",
         element: <RecipeDetails></RecipeDetails>,
+      },
+      {
+        path: "/addTheatre",
+        element: <AddTheatre></AddTheatre>,
+      },
+      {
+        path: "/addMovieToTheatres/:mid",
+        element: <AddMovieToTheatres></AddMovieToTheatres>,
+      },
+      {
+        path: "/tasklist",
+        element: <TaskList></TaskList>,
+      },
+      {
+        path: "/editTask/:id",
+        element: <EditTask></EditTask>,
       },
     ],
   },
